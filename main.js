@@ -25,13 +25,13 @@ var randomColour = function () {
 };
 
 
-var fn = function () {
+var fn = function (body, h1) {
 
-  document.getElementsByTagName('body')[0].style = 'background-color: ' + randomColour();
-  document.getElementsByTagName('h1')[0].style = 'color: ' + randomColour();
-  window.setTimeout(fn, 100);
+  body.style = 'background-color: ' + randomColour();
+  h1.style = 'color: ' + randomColour();
+  window.setTimeout(fn.bind(null, body, h1), 100);
 };
 
 
-fn();
+fn(document.getElementsByTagName('body')[0], document.getElementsByTagName('h1')[0]);
 
