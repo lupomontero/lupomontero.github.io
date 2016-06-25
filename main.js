@@ -33,5 +33,24 @@ var fn = function (body, h1) {
 };
 
 
-fn(document.getElementsByTagName('body')[0], document.getElementsByTagName('h1')[0]);
+var body = document.getElementsByTagName('body')[0];
+var h1 = document.getElementsByTagName('h1')[0];
+
+
+fn(body, h1);
+
+
+body.onclick = function () {
+
+  var fx = ['rubberBand', 'tada', 'jello', 'hinge'];
+
+  h1.className = 'animated ' + fx[random(0, fx.length - 1)];
+
+  window.setTimeout(function () {
+
+    h1.className = '';
+  }, 1000);
+
+  return false;
+};
 
