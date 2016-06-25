@@ -29,7 +29,7 @@ var fn = function (body, h1) {
 
   body.style = 'background-color: ' + randomColour();
   h1.style = 'color: ' + randomColour();
-  window.setTimeout(fn.bind(null, body, h1), 100);
+  window.setTimeout(fn.bind(null, body, h1), 10);
 };
 
 
